@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+      <div id="punchBag">
+          <!--bag-->
+      <div id="bag" :class="{ bagburst : ended}">
+
+      </div>
+          <!--health-->
+          <div id="health">
+              <div :style= "{ width : health + '%' }">
+
+              </div>
+          </div>
+
+          <div>
+            <p v-if="ended"> Game Over </p>
+          </div>
+
+          <!--controls-->
+          <div id="controls">
+              <button @click="punch()" v-show="!ended">Punch</button>
+              <button @click="reset()">Reset</button>
+          </div>
+      </div>
+  </body>
+</html>
