@@ -20,9 +20,9 @@
 </section>
 </template>
 <script>
-import NewFriend from './components/NewFriend.vue';
+//import NewFriend from './components/NewFriend.vue';
 export default {
-  components: { NewFriend },
+  //components: { NewFriend },
     data (){
         return {
             friends : [{
